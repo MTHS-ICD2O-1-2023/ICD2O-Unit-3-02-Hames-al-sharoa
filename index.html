@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <p>Paragraph</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="The math program, in JS" />
+  <meta name="keywords" content="mths, ics2o" />
+  <meta name="author" content="Hames.al-sharoa" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+  <form id="pyramidForm">
+    <h1>Rectangular Pyramid Volume Calculator</h1>
+    <label for="length">Length (mm):</label>
+    <input type="number" step="any" id="length" placeholder="e.g. 3.2" required>
+    <label for="width">Width (mm):</label>
+    <input type="number" step="any" id="width" placeholder="e.g. 4.5" required>
+    <label for="height">Height (mm):</label>
+    <input type="number" step="any" id="height" placeholder="e.g. 5.7" required>
+    <button type="button" onclick="calculateVolume()">Calculate Volume</button>
+    <p id="result"></p>
+  </form>
+  <script>
+  function calculateVolume() {
+    const length = parseFloat(document.getElementById('length').value);
+    const width = parseFloat(document.getElementById('width').value);
+    const height = parseFloat(document.getElementById('height').value);
+    // Calculate the volume using the formula: V = (L x W x H) / 3
+    const volume = (length * width * height) / 3;
+    // Display the result
+    document.getElementById('result').textContent = `Volume is: ${volume.toFixed(2)} mm³`;
+  }
+  </script>
   </body>
-</html>
+  </html>
