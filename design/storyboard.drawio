@@ -1,11 +1,47 @@
 <mxfile host="65bd71144e">
     <diagram id="HIP3nbAZw_EuaXWnEj3U" name="Page-1">
-        <mxGraphModel dx="399" dy="236" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="846" dy="512" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="7" value="http://ics2o.mths.ca" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="40" y="40" width="760" height="480" as="geometry"/>
+                <mxCell id="7" value="http://ics2o.mths.ca" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="45" y="20" width="760" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Area of a square function" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="7">
+                    <mxGeometry x="305.5" y="30" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Start" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="7">
+                    <mxGeometry x="332.5" y="60" width="95" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="7">
+                    <mxGeometry width="100" relative="1" as="geometry">
+                        <mxPoint x="379.5" y="100" as="sourcePoint"/>
+                        <mxPoint x="379.5" y="180" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="Enter in length of square" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="7">
+                    <mxGeometry x="307.5" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="7">
+                    <mxGeometry width="100" relative="1" as="geometry">
+                        <mxPoint x="379.5" y="240" as="sourcePoint"/>
+                        <mxPoint x="379.5" y="300" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="area = length *&lt;br&gt;&amp;nbsp;length" style="whiteSpace=wrap;html=1;" vertex="1" parent="7">
+                    <mxGeometry x="305.5" y="300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="7">
+                    <mxGeometry width="100" relative="1" as="geometry">
+                        <mxPoint x="379" y="360" as="sourcePoint"/>
+                        <mxPoint x="379" y="430" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="Stop" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="7">
+                    <mxGeometry x="332.5" y="430" width="80" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
