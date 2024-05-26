@@ -1,41 +1,89 @@
 <!DOCTYPE html>
-<html>
+<!--- ICS2O-Unit3-02-JS --->
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="description" content="The math program, in JS" />
-  <meta name="keywords" content="mths, ics2o" />
-  <meta name="author" content="Hames.al-sharoa" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+  <meta name="description" content="calculator for volume of pyramid" />
+  <meta name="keywords" content="mths, ics2o" />
+  <meta name="author" content="hamesalsharoa" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>volume of a pyramid</title>
+  <link rel="canonical" href="https://github.com/hames.al-sharoa/ICS2O-Unit3-02-JS" />
+  <link rel="manifest" href="/ICS2O-Unit3-02-JS/manifest.webmanifest" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <!--- None blocking for Lighthouse report --->
+  <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously --->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="none"
+    onload="if(media!='all')media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  </noscript>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-indigo.min.css" media="none"
+    onload="if(media!='all')media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-indigo.min.css" />
+  </noscript>
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="manifest" href="site.webmanifest" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<title>Volume of a pyramid</title>
 <body>
-  <form id="pyramidForm">
-    <h1>Rectangular Pyramid Volume Calculator</h1>
-    <label for="length">Length (mm):</label>
-    <input type="number" step="any" id="length" placeholder="e.g. 3.2" required>
-    <label for="width">Width (mm):</label>
-    <input type="number" step="any" id="width" placeholder="e.g. 4.5" required>
-    <label for="height">Height (mm):</label>
-    <input type="number" step="any" id="height" placeholder="e.g. 5.7" required>
-    <button type="button" onclick="calculateVolume()">Calculate Volume</button>
-    <p id="result"></p>
-  </form>
-  <script>
-  function calculateVolume() {
-    const length = parseFloat(document.getElementById('length').value);
-    const width = parseFloat(document.getElementById('width').value);
-    const height = parseFloat(document.getElementById('height').value);
-    // Calculate the volume using the formula: V = (L x W x H) / 3
-    const volume = (length * width * height) / 3;
-    // Display the result
-    document.getElementById('result').textContent = `Volume is: ${volume.toFixed(2)} mm³`;
-  }
-  </script>
-  </body>
-  </html>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="./js/script.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Volume of Pyramid calculator</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <p>Enter dimensions here:</p>
+      <div id="formula">
+        <p>Formula:</p>
+        <p>V = (L x W x H) / 3</p>
+        <img src="./images/pyramid-area.svg" alt="area of pyramid" height="200" width="350" />
+      </div>
+      <!-- Numeric Textfield -->
+      <form action="#">
+        Length (L):
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" step="any" pattern="-?[0-9]*(\.[0-9]+)?"
+            id="length-of-pyramid" placeholder="insert value" aria-label="Length" />
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+        cm
+      </form>
+      <!-- Numeric Textfield -->
+      <form action="#">
+        Width (W):
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" step="any" pattern="-?[0-9]*(\.[0-9]+)?" id="width-of-pyramid"
+            placeholder="insert value" aria-label="Width" />
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+        cm
+      </form>
+      <!-- Numeric Textfield -->
+      <form action="#">
+        Height (H):
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" step="any" pattern="-?[0-9]*(\.[0-9]+)?"
+            id="height-of-pyramid" placeholder="insert value" aria-label="Height" />
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+        cm
+      </form>
+      <!-- Raised button with ripple -->
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+        onclick="solveVolume()">
+        calculate
+      </button>
+      <div id="answer">
+        <div id="volume">Volume =</div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
